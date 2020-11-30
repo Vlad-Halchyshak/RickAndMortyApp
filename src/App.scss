@@ -1,0 +1,38 @@
+.nav {
+  display: flex;
+  
+ 
+}
+.nav a.active {
+  color: gold
+}
+
+.nav a {
+  display: flex;
+  color: white;
+  padding: 1rem;
+  justify-content: space-around;
+  text-decoration: none;
+  
+}
+.container {
+  margin-top: 100px;
+  
+}
+
+.home img {
+  
+ width: 100%;
+ height: 100%;
+ position: absolute;
+ top: -19px;
+ 
+}
+.home p {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  color:wheat;
+  width: 300px;
+  
+}
