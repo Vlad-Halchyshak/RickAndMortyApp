@@ -3,9 +3,7 @@ import React, {useState,useEffect} from 'react'
 export const Pagination = ({ setCharacters}) => {
   const [info, setInfo] = useState(1)
  
-  
- 
-  const fetchCharacters = async (page) => {
+ const fetchCharacters = async (page) => {
     // const {page, status} = params
 
     let url = `https://rickandmortyapi.com/api/character`
@@ -16,7 +14,7 @@ export const Pagination = ({ setCharacters}) => {
     const result = await fetch(url)
     const response = await result.json()
     const pageInfo = response.info
-   
+   console.log(response)
 
     setInfo({
       next: page < pageInfo.pages ? page + 1 : null,

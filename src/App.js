@@ -7,18 +7,13 @@ import { MyWatchList } from './components/myWatchList/Mylist';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import Menu from './components/navigation/Nav';
 import { Home } from './components/Home/home';
-import { useSelector, useDispatch } from 'react-redux'
-import React,{useEffect} from 'react'
-import { getCharacter } from './redux/charsReducer';
+
+
+
 
 
 function App() {
- /*  const data = useSelector((state) => state.characters.data)
-  console.log(data)
-  const dispatch = useDispatch()
-  useEffect(() => {
-    dispatch(getCharacter())
-  }, []) */
+ 
   return (
     <div className="App">
       <BrowserRouter>

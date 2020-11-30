@@ -2,17 +2,13 @@ import { useEffect, useState } from "react"
 import { Card } from "./charactersCard"
 import style from './characters.scss'
 import { Pagination } from "./pagination"
-//import { PopoverYeah } from "./popOver"
-
-import { getCharacter } from "../../redux/charsReducer"
 
 export const Characters = () => {
   
-  
-  
-
-  const [Characters, setCharacters] = useState(null)
- /*  const [alive, setAlive] = useState(null)
+const [Characters, setCharacters] = useState(null)
+  const [filter, setFilter] = useState(null)
+// Вот этот блок кода запрашивает фильтрацию по статусу, и кладёт респонс у Characters
+  const [alive, setAlive] = useState(null)
   console.log(alive)
  const statusFilter = async (status) => {
      let url = `https://rickandmortyapi.com/api/character?status=${status}`
@@ -23,14 +19,14 @@ export const Characters = () => {
    }
   useEffect(() => {
      console.log('yes ')
-   }, [alive]) */
+   }, [alive])
 
   return (
     <>
       <Pagination setCharacters={setCharacters} />
-      {/* <button onClick={() => statusFilter('Dead')}>filter</button>
-      <button onClick={() => statusFilter('Alive')}>alive</button>
-      <button onClick={() => statusFilter('Unknown')}>Unknown</button> */}
+      <button onClick={() => statusFilter('Dead')}>Dead</button>
+      <button onClick={() => statusFilter('Alive')}>Alive</button>
+      <button onClick={() => statusFilter('Unknown')}>Unknown</button>
       <div className="container_list">
         {Characters &&
           Characters.map((character, index) => (
